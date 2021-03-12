@@ -1,0 +1,168 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>Ringing changes</title>
+
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+  </head>
+  <body>
+    <div id="closed">
+      <h3>
+        Connection error - try reloading to re-enter.
+      </h3>
+    </div>
+    
+    <div id="enter">
+      <h3>
+        Bedecked blaze chamber
+      </h3>
+      <label for="name" class="enter">Enter a display name to join the ringing chamber:</label>
+      <input id="name" type="text" class="block"/>
+      <label for="secret" class="enter">Enter the secret word:</label>
+      <input id="secret" type="text" autocomplete="off" class="block"/>
+      <button type="button" id="enterbutton">
+        Enter the chamber
+      </button>
+    </div>
+    
+    <div id="phoneinfo" class="hidden">
+      <h3>
+        Bedecked blaze chamber
+      </h3>
+    </div>
+    
+    <div id="container" style="display:none">
+      <div class="column">
+        <h3>
+          Bedecked blaze chamber
+        </h3>
+        <h4>
+          Ringers
+        </h4>
+        <ul id="entrants">
+          
+        </ul>
+        <h4>
+          Room controls
+        </h4>
+        <h5>
+          Stage
+        </h5>
+        <ul id="numbells">
+          <li id="minimus">4</li>
+          <li id="minor">6</li>
+          <li id="major">8</li>
+          <li id="royal">10</li>
+          <li id="maximus">12</li>
+        </ul>
+        <ul id="conduct">
+          <li id="start">Start</li>
+          <li id="reset">Reset</li>
+        </ul>
+        <div class="conduct" >
+          <label for="speed">Row duration in seconds: </label>
+          <input id="speed" type="number" value="2.0" step="0.1">
+        </div>
+        <div class="conduct" >
+          <label for="waitforgaps"><input id="waitforgaps" type="checkbox" />Wait for gaps to be filled</label>
+          
+          <ul id="limitadvance">
+            <li>Limit bell advance</li>
+            <li><input id="rowlimit" type="number" min="1" step="1" /> rows</li>
+            <li><input id="aheadsounds" type="checkbox" /> ahead of sound</li>
+            <li><input id="aheadbells" type="checkbox" /> ahead of other bells</li>
+          </ul>
+        </div>
+        <h4>
+          Personal controls
+        </h4>
+        <h5>
+          Sound
+        </h5>
+        <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
+        <ul id="sounds">
+          <li><input type="radio" name="sounds" value="tower" checked />Vancouver tower</li>
+          <li><input type="radio" name="sounds" value="mabel" />Mabel tower</li>
+        </ul>
+        <!--<h4>
+          View
+        </h4>-->
+        
+
+        
+
+
+        
+        
+        <!--<div id="keyboard">
+          <h4>
+            Keyboard controls
+          </h4>
+          <ul>
+            
+          </ul>
+          
+        </div>-->
+        
+        <h4>
+          Chat
+        </h4>
+        <textarea readonly></textarea>
+        <input type="text" id="chat" class="block">
+        <a href="https://glitch.com/edit/#!/bedecked-ablaze-risk?path=README.md%3A1%3A0">About this app</a>
+      </div>
+      <div class="column" id="room">
+        <div id="display">
+          
+        </div>
+        <div id="bells">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400">
+            <rect x="0" y="0" width="400" height="400" style="stroke: #000; fill: none;" />
+            
+            <svg id="viewbox" viewbox="0 0 400 400" width="400">
+              <g id="placelines" style="stroke: rgb(155,155,155); stroke-width: 1; fill: none;" stroke-dasharray="5 2">
+                
+              </g>
+              <g id="placenums" style="fill: rgb(155,155,155); font-family: Verdana; font-size: 10px" text-anchor="center">
+                
+              </g>
+              <g id="bellgroup" text-anchor="center" font-family="Verdana">
+              
+              </g>
+            </svg>
+            
+          </svg>
+          
+        </div>
+        <div id="display2">
+          
+        </div>
+        <button type="button" id="resume">
+          Click here to resume ringing
+        </button>
+        
+      </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="jquery.svg.js"></script>
+    <script src="jquery.svganim.js"></script>
+    <script src="jquery.svgdom.js"></script>
+    <script src="sense.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

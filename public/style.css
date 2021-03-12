@@ -1,0 +1,203 @@
+/* this file is loaded by index.html and styles the page */
+
+* {
+  box-sizing: border-box;
+  font-family: Georgia;
+}
+
+textarea {
+  width: 250px;
+  height: 200px;
+}
+
+label.enter, button, input.block {
+  display: block;
+  margin: 10px 0;
+}
+
+div#enter {
+  width: 275px;
+  margin: 10px auto;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+select {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+button {
+  padding: 20px;
+  font-family: Georgia;
+  font-size: 20px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+button#stand {
+  font-size: 14px;
+  padding: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.conduct {
+  display: none;
+}
+
+div#closed {
+  display: none;
+}
+
+div#container {
+  display: flex;
+  flex-flow: row;
+}
+div.column {
+  margin: 5px;
+}
+
+label.enter, input#name {
+  width: 200px;
+}
+
+ul#entrants li {
+  margin-bottom: 2px;
+}
+
+div.assign {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  min-width: 50px;
+  color: grey;
+}
+
+div.assign.active {
+  color: black;
+}
+
+ul.dropdown {
+  display: none;
+  position: absolute;
+  background-color: aliceblue;
+  padding-left: 10px;
+  width: 100%;
+}
+
+div.assign.active:hover > ul.dropdown, ul.dropdown.block {
+  display: block;
+}
+ul#entrants li:hover ~ li > div.assign, div.assign.hide {
+  position: static;
+}
+
+span.summary {
+  display: inline-block;
+  width: 100%;
+  height: 21px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-left: 2px;
+}
+div.assign.active > span.summary {
+  border-color: black;
+}
+
+
+
+ul#numbells li {
+  display: inline-block;
+  width: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+ul#numbells li:nth-child(2) {
+  color: white;
+  background-color: black;
+}
+ul#numbells li:hover {
+  cursor: pointer;
+}
+
+ul#conduct li {
+  display: inline-block;
+  padding: 4px;
+  margin: 7px;
+  border: 1px solid black;
+}
+ul#conduct li:hover {
+  cursor: pointer;
+}
+
+
+
+input#speed {
+  width: 40px;
+}
+
+input#chat {
+  width: 250px;
+}
+
+div#room {
+  position: relative;
+}
+
+div#display {
+  display: flex;
+  flex-flow: row;
+  margin: 20px 0;
+}
+
+div#display2 {
+  display: flex;
+  flex-flow: row;
+  margin: 20px 0;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  margin: 10px 14px;
+}
+
+div.keycontainer {
+  position: relative;
+  width: 200px;
+}
+
+div.key {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 2px;
+  top: 40px;
+  left: 50px;
+}
+div.key.left {
+  left: 0;
+}
+div.key.top {
+  top: 0;
+}
+div.key.right {
+  left: 100px;
+}
+
+p.key {
+  margin: 5px 14px;
+}
